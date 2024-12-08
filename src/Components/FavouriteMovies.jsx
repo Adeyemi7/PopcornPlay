@@ -20,7 +20,7 @@ const FavouriteMovies = () => {
         {favorites.map((favorite) => (
             <>
           <li className='list-none' key={favorites}>
-            <img src={`https://image.tmdb.org/t/p/w500${favorite.poster_path}`} alt={favorite.title} className="w-64 h-80 rounded-lg mt-4" />
+            <img src={`https://image.tmdb.org/t/p/w500${favorite.poster_url}`} alt={favorite.title} className="w-64 h-80 rounded-lg mt-4" />
             <h2 >{favorite.title}</h2>
             <p>Release Date: {favorite.release_date}</p>
           </li>
