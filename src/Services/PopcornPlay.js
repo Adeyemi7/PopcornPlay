@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 // API Configuration
 const API_BASE_URL = "https://api.themoviedb.org/3";
 // const API_KEY = "2409363cb7144dbc4b1de5e3ef5e6991"; // my API key
@@ -26,3 +27,4 @@ export const searchMovies = async (query) => {
     return [];
   }
 };
+

@@ -1,4 +1,4 @@
-import searchMovies from "../Services/PopcornPlay";
+import { searchMovies } from '../Services/PopcornPlay.js';
 import LogoImage from "../Components/LogoImage";
 import SearchBar from "../Components/SearchBar";
 import MoviesList from "../Components/MoviesList";
