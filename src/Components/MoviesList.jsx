@@ -14,7 +14,6 @@ const MovieList = ({movies}) => {
   const navigate = useNavigate();
 
   const handleNewRoute = (id) => {
-    console.log ('i am happy')
     navigate(`/MovieInfo/${id}`);
   };
 
@@ -30,8 +29,7 @@ const MovieList = ({movies}) => {
             transform: isHoveredIndex === id ? 'scale(1.1)' : 'scale(1)',
             transition: isHoveredIndex === id ? 'none' : 'transform 0.3s ease',
           }}
-          // onClick={handleNewRoute}
-          onClick={() => handleNewRoute(movie.id)}  // Correctly pass the movie ID
+          onClick={() => handleNewRoute(movie.id)}
       onMouseEnter={() => setIsHoveredIndex(id)}
       onMouseLeave={() => setIsHoveredIndex(null)}
           className="flex flex-col items-center bg- rounded-lg shadow-xxl p-4 hover:"

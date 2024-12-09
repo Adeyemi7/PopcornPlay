@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 
-import { FaExclamationTriangle } from "react-icons/fa"; // Importing the golden icon
+import { FaExclamationTriangle } from "react-icons/fa"; 
 
 const NotFound = () => {
   return (
@@ -19,7 +19,7 @@ const NotFound = () => {
       </p>
       
       <button
-        className="mt-8 px-10 py-4 bg-gold text-white font-semibold rounded-lg shadow-xl hover:bg-yellow-500 transition duration-300"
+        className="mt-8 px-10 py-4 bg-gold text-white font-semibold rounded-lg shadow-md hover:bg-yellow-500 transition duration-300"
         onClick={() => (window.location.href = "/")}
       >
         Back to Home

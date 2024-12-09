@@ -1,6 +1,5 @@
-
 import  { useState, useEffect } from 'react';
-
+import { useNavigate } from 'react-router';
 
 const FavouriteMovies = () => {
   const [favorites, setFavorites] = useState([]);
@@ -11,6 +10,12 @@ const FavouriteMovies = () => {
       setFavorites(JSON.parse(storedFavorites));
     }
   }, []);
+
+  const Navigate = useNavigate ();
+
+  const handleNewRoute = () => {
+    Navigate('/NewMoviePage')
+  }
 
   return (
     <>
@@ -38,6 +43,7 @@ const FavouriteMovies = () => {
 
     <div>
     <button
+    onClick={()=>handleNewRoute()}
         className="py-2 block my-6 px-4 rounded mt-4bg-red-500 bg-blue-700 hover:bg-red-900 text-white font-bold"
         >
             Add new Genres

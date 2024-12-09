@@ -41,7 +41,7 @@ function MovieDetails() {
     const favoriteMovie = {
       id: movie.id,
       title: movie.title,
-      poster_url: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,  // Store the full URL
+      poster_url: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
       release_date: movie.release_date,
     };
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
@@ -76,7 +76,7 @@ function MovieDetails() {
             <img
               src={`https://image.tmdb.org/t/p/w500${recMovie.poster_path}`}
               alt={recMovie.title}
-              className="w-32 h-48 object-cover rounded-md"
+              className="w-32 h-48 object-cover rounded-md mx-auto block"
             />
             <span>{recMovie.title} ({recMovie.release_date?.slice(0, 4)})</span>
           </div>
