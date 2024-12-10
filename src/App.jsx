@@ -6,8 +6,17 @@ import MovieInfo from "./Pages/MovieInfo";
 import NotFound from "./Pages/NotFound";
 import FavouritesMoviesPage from "./Pages/FavouritesMoviesPage";
 import NewMoviePage from "./Pages/NewMoviePage";
+import { useState,useEffect } from "react";
 
 const App = () => {
+  const [favorites, setFavorites] = useState([]);
+
+  useEffect(() => {
+    const storedFavorites = localStorage.getItem('favorites');
+    if (storedFavorites) {
+      setFavorites(JSON.parse(storedFavorites));
+    }
+  }, []);
   return (
     <Router>
       <Routes>
@@ -15,7 +24,7 @@ const App = () => {
 
         <Route path="/MovieInfo/:id" element={<MovieInfo />} />
 
-        <Route path="/FavouritesMoviesPage" element={<FavouritesMoviesPage />} />
+        <Route path="/FavouritesMoviesPage" element={<FavouritesMoviesPage favorites={favorites} />} />
 
         <Route path="/NewMoviePage" element={<NewMoviePage />} />
 

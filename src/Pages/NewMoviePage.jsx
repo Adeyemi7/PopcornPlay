@@ -3,8 +3,6 @@ import { IoIosArrowBack } from "react-icons/io";
 import { useNavigate } from "react-router";
 
 
-
-
 const NewMoviePage = () => {
 
   const Navigate = useNavigate();

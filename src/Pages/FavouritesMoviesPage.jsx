@@ -11,7 +11,7 @@ const FavouritesMoviesPage = (id) => {
   }
 
   return (
-    <div className="mx-auto w-[90%] block">
+    <div className="mx-auto w-[90%] block mt-10">
     <IoIosArrowBack  className=" size-12 mb-6 fill-white"  onClick={()=>handlePrevRoute()}/>
       <FavouriteMovies id={id} />
     </div>
